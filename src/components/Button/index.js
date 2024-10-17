@@ -1,12 +1,14 @@
-
-import { ButtonContainer } from './styles';
-
-const Button = ({label, onClick}) => {
+import { ButtonContainer } from './styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+const Button = ({label, onClick, className, icon}) => {
     return (
-      <ButtonContainer onClick={onClick} type="button">
-       {label}
+      <ButtonContainer onClick={onClick} className={className}>
+        {icon && <FontAwesomeIcon icon={icon}/>}
+        {label}
       </ButtonContainer>
     );
   }
+
   
   export default Button;
+  
